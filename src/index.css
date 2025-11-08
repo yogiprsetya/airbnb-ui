@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+:root {
+  /* Shades */
+  --shade-01: #ffffff;
+  --shade-02: #222222;
+  --shade-02-5: rgba(34, 34, 34, 0.05);
+  --shade-02-30: rgba(34, 34, 34, 0.3);
+
+  /* Neutrals */
+  --neutral-01: #f7f7f7;
+  --neutral-02: #ebebeb;
+  --neutral-03: #dddddd;
+  --neutral-04: #d3d3d3;
+  --neutral-05: #c2c2c2;
+  --neutral-06: #b0b0b0;
+  --neutral-07: #717171;
+  --neutral-08: #5e5e5e;
+
+  /* Primary */
+  --primary-01: #f6475f;
+  --primary-02: #ff385c;
+
+  /* Error */
+  --error-01: #fef8f6;
+  --error-02: #c13515;
+
+  /* Accents */
+  --accent-01: #f6d7df;
+  --accent-02: #d03660;
+  --discount: #008a05;
+  --link: #004cc4;
+}
