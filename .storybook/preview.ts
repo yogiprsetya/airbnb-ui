@@ -1,5 +1,5 @@
-import type { Preview } from "@storybook/react";
-import "../src/index.css";
+import type { Preview } from '@storybook/react';
+import '../src/index.css';
 
 const preview: Preview = {
   parameters: {
@@ -10,20 +10,20 @@ const preview: Preview = {
       },
     },
     backgrounds: {
-      default: "light",
+      default: 'light',
       values: [
         {
-          name: "light",
-          value: "#ffffff",
+          name: 'light',
+          value: '#ffffff',
         },
         {
-          name: "dark",
-          value: "#1a1a1a",
+          name: 'dark',
+          value: '#1a1a1a',
         },
       ],
     },
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 };
 
 export default preview;
