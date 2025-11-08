@@ -31,3 +31,7 @@
   --discount: #008a05;
   --link: #004cc4;
 }
+
+body {
+  font-family: "Roboto", sans-serif;
+}
