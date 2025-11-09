@@ -39,17 +39,26 @@
   --radius-cta: 9999px;
 }
 
-/* Gradient Utility Classes */
-.bg-gradient-01 {
-  background: var(--color-gradient-01);
+@layer utilities {
+  /* Gradient Classes */
+  .bg-gradient-01 {
+    background: var(--color-gradient-01);
+  }
+
+  .bg-gradient-02 {
+    background: var(--color-gradient-02);
+  }
+
+  .bg-gradient-03 {
+    background: var(--color-gradient-03);
+  }
 }
 
-.bg-gradient-02 {
-  background: var(--color-gradient-02);
-}
-
-.bg-gradient-03 {
-  background: var(--color-gradient-03);
+@layer base {
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
 }
 
 body {

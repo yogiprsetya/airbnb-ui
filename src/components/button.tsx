@@ -6,22 +6,27 @@ import { cn } from '~/lib/utils';
 const buttonVariants = cva(
   cn([
     'inline-flex items-center justify-center gap-2 shrink-0 [&_svg]:shrink-0',
-    'text-base font-medium',
+    'font-medium',
     'whitespace-nowrap transition-all outline-none',
     'disabled:pointer-events-none [&_svg]:pointer-events-none',
+    'focus-visible:shadow-[0_0_0_2px_rgb(255,255,255),0_0_0_4px_rgb(34,34,34)]',
   ]),
   {
     variants: {
       variant: {
-        default: 'bg-gradient-02 text-shade-01',
+        default:
+          'bg-gradient-02 text-shade-01 hover:bg-gradient-03 active:bg-gradient-01 disabled:bg-neutral-03',
+        secondary: 'bg-shade-02 text-shade-01 disabled:bg-neutral-03',
+        tertiary:
+          'bg-transparent hover:bg-shade-02-5 border border-shade-02 text-shade-02 disabled:bg-neutral-03',
       },
       rounded: {
         default: 'rounded-default',
         cta: 'rounded-cta',
       },
       size: {
-        small: 'h-10 py-3.5 px-6',
-        'full-width': 'h-10 w-full',
+        small: 'text-sm h-10 py-3.5 px-6',
+        'full-width': 'text-base h-10 w-full',
       },
     },
     defaultVariants: {
