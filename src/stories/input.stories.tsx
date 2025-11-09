@@ -43,11 +43,11 @@ type Story = Omit<StoryObj<typeof meta>, 'args'> & {
 };
 
 export const Default: Story = {
-  render: ({ type, disabled, placeholder, value, ...props }) => (
+  render: ({ type, disabled, value, ...props }) => (
     <Input
       type={type || 'text'}
       disabled={disabled}
-      placeholder={placeholder || 'Masukkan teks...'}
+      placeholder="Enter text..."
       value={value}
       className="w-96"
       {...props}
@@ -56,14 +56,14 @@ export const Default: Story = {
 };
 
 export const WithLabel: Story = {
-  render: ({ type, disabled, placeholder, value, ...props }) => (
+  render: ({ type, disabled, value, ...props }) => (
     <div className="flex flex-col gap-2">
-      <Label htmlFor="input-with-label">Nama Lengkap</Label>
+      <Label htmlFor="input-with-label">Full Name</Label>
       <Input
         id="input-with-label"
         type={type || 'text'}
         disabled={disabled}
-        placeholder={placeholder || 'Masukkan nama lengkap...'}
+        placeholder="Enter full name..."
         value={value}
         {...props}
       />
@@ -72,14 +72,14 @@ export const WithLabel: Story = {
 };
 
 export const Email: Story = {
-  render: ({ disabled, placeholder, value, ...props }) => (
+  render: ({ disabled, value, ...props }) => (
     <div className="flex flex-col gap-2">
       <Label htmlFor="input-email">Email</Label>
       <Input
         id="input-email"
         type="email"
         disabled={disabled}
-        placeholder={placeholder || 'nama@example.com'}
+        placeholder="nama@example.com"
         value={value}
         {...props}
       />
@@ -88,14 +88,14 @@ export const Email: Story = {
 };
 
 export const Password: Story = {
-  render: ({ disabled, placeholder, value, ...props }) => (
+  render: ({ disabled, value, ...props }) => (
     <div className="flex flex-col gap-2">
       <Label htmlFor="input-password">Password</Label>
       <Input
         id="input-password"
         type="password"
         disabled={disabled}
-        placeholder={placeholder || 'Masukkan password...'}
+        placeholder="Enter password..."
         value={value}
         {...props}
       />
@@ -108,15 +108,15 @@ export const Disabled: Story = {
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-2">
         <Label htmlFor="input-disabled">Input Disabled</Label>
-        <Input id="input-disabled" type="text" disabled placeholder="Input ini disabled" />
+        <Input id="input-disabled" type="text" disabled placeholder="This input is disabled" />
       </div>
       <div className="flex flex-col gap-2">
-        <Label htmlFor="input-disabled-value">Input Disabled dengan Value</Label>
+        <Label htmlFor="input-disabled-value">Disabled Input with Value</Label>
         <Input
           id="input-disabled-value"
           type="text"
           disabled
-          value="Nilai yang tidak bisa diubah"
+          value="Value that cannot be changed"
         />
       </div>
     </div>
@@ -126,8 +126,8 @@ export const Disabled: Story = {
 export const WithValue: Story = {
   render: () => (
     <div className="flex flex-col gap-2">
-      <Label htmlFor="input-value">Input dengan Value</Label>
-      <Input id="input-value" type="text" value="Nilai yang sudah terisi" />
+      <Label htmlFor="input-value">Input with Value</Label>
+      <Input id="input-value" type="text" value="Pre-filled value" />
     </div>
   ),
 };
