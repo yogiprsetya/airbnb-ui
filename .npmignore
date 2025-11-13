@@ -39,6 +39,9 @@ coverage/
 *.spec.ts
 *.spec.tsx
 
+# Changesets (development only)
+.changeset/
+
 # Other
 public/
 index.html

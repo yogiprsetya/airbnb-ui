@@ -8,15 +8,16 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/airbnb-ui.es.js",
-      "require": "./dist/airbnb-ui.umd.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/airbnb-ui.umd.js"
     },
     "./styles": "./dist/index.css"
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ],
   "keywords": [
     "react",
@@ -42,7 +43,9 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky"
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "npm run build && changeset publish"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
@@ -59,6 +62,7 @@
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.7",
     "@chromatic-com/storybook": "^4.1.2",
     "@eslint/js": "^9.36.0",
     "@storybook/addon-a11y": "^10.0.6",
