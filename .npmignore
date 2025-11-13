@@ -1,0 +1,49 @@
+# Source files
+src/
+*.ts
+*.tsx
+!dist/**/*.d.ts
+
+# Development files
+.storybook/
+stories/
+*.stories.tsx
+*.stories.ts
+
+# Config files
+vite.config.ts
+tsconfig*.json
+tailwind.config.js
+eslint.config.js
+.prettierrc*
+.editorconfig
+
+# Build tools
+node_modules/
+.git/
+.gitignore
+.husky/
+.vscode/
+.idea/
+
+# Development
+.env*
+*.log
+.DS_Store
+coverage/
+.nyc_output/
+
+# Testing
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Changesets (development only)
+.changeset/
+
+# Other
+public/
+index.html
+dist-storybook/
+

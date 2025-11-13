@@ -1,6 +1,6 @@
-# React + TypeScript + Vite
+# airbnb-ui
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React component library with Airbnb-inspired design, built with TypeScript, Vite, and Tailwind CSS.
 
 Currently, two official plugins are available:
 
@@ -117,6 +117,60 @@ Or:
 ```bash
 yarn build-storybook
 ```
+
+## Versioning & Changelog Management
+
+This project uses [Changesets](https://github.com/changesets/changesets) for version management and changelog generation.
+
+### Creating a Changeset
+
+When you make changes that should be included in the next release, create a changeset:
+
+```bash
+npm run changeset
+```
+
+This will prompt you to:
+
+1. Select the type of change (patch, minor, or major)
+2. Write a summary of the changes
+
+The changeset will be saved in the `.changeset` directory.
+
+### Versioning
+
+To update the version and generate the changelog based on all changesets:
+
+```bash
+npm run version
+```
+
+This will:
+
+- Update the version in `package.json`
+- Generate/update `CHANGELOG.md`
+- Remove the consumed changesets
+
+### Releasing
+
+To build and publish the package to npm:
+
+```bash
+npm run release
+```
+
+This will:
+
+- Build the package
+- Publish to npm using the changesets publish command
+
+### Workflow
+
+1. Make your changes
+2. Run `npm run changeset` to document the changes
+3. Commit the changes and changeset files
+4. When ready to release, run `npm run version` to bump version and update changelog
+5. Run `npm run release` to build and publish
 
 ## React Compiler
 
